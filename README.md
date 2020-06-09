@@ -1,4 +1,4 @@
-![master](https://github.com/intellective-oss/unity7-maven-archetype/workflows/build/badge.svg)
+![master](https://github.com/intellective-oss/unity7-maven-archetype/workflows/Build/badge.svg)
 
 # Unity 7 Maven Archetype
 Maven Archetype for creating projects based on Unity 7
