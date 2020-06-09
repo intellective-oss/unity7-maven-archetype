@@ -1,0 +1,17 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!-- run-time/custom wro.xml -->
+<groups xmlns="http://www.isdc.ro/wro"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
+
+    <!-- Customization group -->
+    <group name="customization">
+        <js>/js/custom/HelloWorldTab.js</js>
+
+        <css>/styling/overrides/sample-common.css</css>
+    </group>
+    <!-- END: Customization group -->
+
+</groups>

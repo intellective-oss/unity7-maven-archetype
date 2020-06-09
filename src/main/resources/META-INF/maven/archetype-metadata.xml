@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+        xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+        name="unity7-custom-app"
+        xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requiredProperties>
+        <requiredProperty key="unityVersion">
+            <defaultValue>7.7.0-RC2</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="unityCommonsVersion">
+            <defaultValue>1.1.2</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>custom-docker</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory>custom-docker</directory>
+            <includes>
+                <include>**/*.</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>.gitignore</include>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <modules>
+        <module id="custom-config" dir="custom-config" name="custom-config">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.ini</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="custom-i18n" dir="custom-i18n" name="custom-i18n">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.txt</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.uiIndex</include>
+                        <include>**/*.srvIndex</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="custom-services" dir="custom-services" name="custom-services">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="custom-webapp" dir="custom-webapp" name="custom-webapp">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.css</include>
+                        <include>**/*.js</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>profiles/dev-no-tests</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>profiles/integration-test</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>profiles/all-tests</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>profiles/dev</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>

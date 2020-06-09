@@ -1,0 +1,28 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<web-app>
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/custom-api/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>custom-api-dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/configuration/custom-api-servlet.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>throwExceptionIfNoHandlerFound</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>custom-api-dispatcher</servlet-name>
+        <url-pattern>/custom-api/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
