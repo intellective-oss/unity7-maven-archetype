@@ -17,12 +17,12 @@ jobs:
           server-password: MAVEN_PASSWORD
 
       - name: Cache dependencies
-          uses: actions/cache@v1
-          with:
-            path: ~/.m2/repository
-            key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-            restore-keys: |
-              ${{ runner.os }}-maven-
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
 
       - name: Publish package
         run: mvn -B deploy
