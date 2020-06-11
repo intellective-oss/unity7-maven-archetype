@@ -9,7 +9,41 @@
 
     <packaging>maven-archetype</packaging>
 
-    <name>unity7-custom-app</name>
+    <name>unity7-maven-archetype</name>
+
+    <description>Unity 7 Archetype allows to create a structure for the application project based on the platform.
+        It includes multi-module Maven project, a module for handling configuration, and
+        the Docker image module.</description>
+
+    <url>https://www.intellective.com/unity</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Oleg Zimakov</name>
+            <email>ozimakov@intellective.com</email>
+            <organization>Intellective</organization>
+            <organizationUrl>https://www.intellective.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Eugene Smirnov</name>
+            <email>esmirnov@intellective.com</email>
+            <organization>Intellective</organization>
+            <organizationUrl>https://www.intellective.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/intellective-oss/unity7-maven-archetype.git</connection>
+        <developerConnection>scm:git:ssh://github.com:intellective-oss/unity7-maven-archetype.git</developerConnection>
+        <url>https://github.com/intellective-oss/unity7-maven-archetype/tree/master</url>
+    </scm>
 
     <build>
         <extensions>
@@ -27,6 +61,48 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
     <distributionManagement>
