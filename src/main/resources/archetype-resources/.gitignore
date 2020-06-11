@@ -1,0 +1,9 @@
+**/target/
+*.iml
+.idea
+.eclipse
+**/overlays/
+.classpath
+.project
+.settings/
+**/modules/git.properties

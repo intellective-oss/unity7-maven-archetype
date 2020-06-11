@@ -22,7 +22,7 @@
         <fileSet encoding="UTF-8">
             <directory>custom-docker</directory>
             <includes>
-                <include>**/*.</include>
+                <include>**/Dockerfile</include>
             </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
