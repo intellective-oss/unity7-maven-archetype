@@ -84,19 +84,19 @@ unless there're explicit requirements to change it.
 ## Building the application
 Use the following Maven command or perform corresponding action in the IDE of your choice:
 ```
-mvn clean package
+mvn package
 ```
 Or if you want to build a Docker image, use corresponding profile:
 ```
-mvn -Pdocker clean package
+mvn package -P docker
 ```
 To build you app in Web Development mode (no obfuscation/minimization) use `web-dev-mode` profile:
 ```
-mvn -Pweb-dev-mode clean package
+mvn package -P web-dev-mode
 ```
 or for Docker:
 ```
-mvn -Pweb-dev-mode,docker clean package
+mvn package -P web-dev-mode,docker
 ```
 
 ## Running on OpenLiberty
