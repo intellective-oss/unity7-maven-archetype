@@ -23,12 +23,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <unity.version>${unityVersion}</unity.version>
-        <unity.commons.version>${unityCommonsVersion}</unity.commons.version>
 
         <wro4j.version>1.8.0</wro4j.version>
-        <wro4jtag.version>1.4.3</wro4jtag.version>
-        <spring.version>4.3.23.RELEASE</spring.version>
-        <slf4j.version>1.7.25</slf4j.version>
     </properties>
 
     <repositories>
@@ -72,44 +68,16 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.intellective.unity</groupId>
-                <artifactId>unity-commons</artifactId>
-                <version>${unity.commons.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.vegaecm.vu</groupId>
                 <artifactId>vu-core</artifactId>
                 <version>${unity.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-core</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-webmvc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ro.isdc.wro4j</groupId>
-                <artifactId>wro4j-core</artifactId>
-                <version>${wro4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.orange.wro4j</groupId>
-                <artifactId>wro4j-taglib</artifactId>
-                <version>${wro4jtag.version}</version>
+                <groupId>com.intellective.unity</groupId>
+                <artifactId>unity-bom</artifactId>
+                <version>${unity.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
