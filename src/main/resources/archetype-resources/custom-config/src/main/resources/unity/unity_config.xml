@@ -442,15 +442,12 @@
     </Properties>
     <Grids/>
     <Tabs>
-        <!-- U7-2723 -->
         <Tab ID="HelloWorldTab">
             <Title>Custom Hello World Tab</Title>
             <Tooltip/>
             <XType>hello-world-tab</XType>
             <CustomParameters/>
         </Tab>
-        <!-- END: U7-2723 -->
-
         <Tab ID="configuration-console">
             <Title>Configuration Console</Title>
             <Tooltip/>
