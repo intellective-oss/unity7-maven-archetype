@@ -1,15 +1,10 @@
 # Unity 7 Custom Application sample
 
-Build the app:
+Build in development mode (no JS obfuscation/minimization):
 ```
-mvn package
+mvn clean package -P web-dev-mode
 ```
-Build in development mode (no obfuscation/minimization):
+Build for production with Docker image:
 ```
-mvn -Pweb-dev-mode package
+mvn clean package -P docker
 ```
-Build with Docker image:
-```
-mvn -Pdocker package
-```
----
