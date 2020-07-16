@@ -8,21 +8,21 @@ On Windows (cmd.exe):
 ```
 mvn archetype:generate "-DarchetypeGroupId=com.intellective.archetypes" ^
                        "-DarchetypeArtifactId=unity7-maven-archetype" ^
-                       "-DarchetypeVersion=1.0.2" ^
+                       "-DarchetypeVersion=1.0.3" ^
                        "-DgroupId=com.intellective.sample" ^
                        "-DartifactId=unity7-custom-app" ^
                        "-Dversion=1.0.0-SNAPSHOT" ^
-                       "-DunityVersion=7.7.0-RC4"
+                       "-DunityVersion=7.7.0-RC6"
 ```
 On Linux or MacOS:
 ```
 mvn archetype:generate -DarchetypeGroupId=com.intellective.archetypes \
                        -DarchetypeArtifactId=unity7-maven-archetype \
-                       -DarchetypeVersion=1.0.2 \
+                       -DarchetypeVersion=1.0.3 \
                        -DgroupId=com.intellective.sample \
                        -DartifactId=unity7-custom-app \
                        -Dversion=1.0.0-SNAPSHOT \
-                       -DunityVersion=7.7.0-RC4
+                       -DunityVersion=7.7.0-RC6
 ```
 
 ## System requirements
