@@ -12,7 +12,7 @@ mvn archetype:generate "-DarchetypeGroupId=com.intellective.archetypes" ^
                        "-DgroupId=com.intellective.sample" ^
                        "-DartifactId=unity7-custom-app" ^
                        "-Dversion=1.0.0-SNAPSHOT" ^
-                       "-DunityVersion=7.7.0-RC6"
+                       "-DunityVersion=7.7.0-RC11"
 ```
 On Linux or MacOS:
 ```
@@ -22,7 +22,7 @@ mvn archetype:generate -DarchetypeGroupId=com.intellective.archetypes \
                        -DgroupId=com.intellective.sample \
                        -DartifactId=unity7-custom-app \
                        -Dversion=1.0.0-SNAPSHOT \
-                       -DunityVersion=7.7.0-RC6
+                       -DunityVersion=7.7.0-RC11
 ```
 
 ## System requirements
