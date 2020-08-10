@@ -40,9 +40,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/intellective-oss/unity7-maven-archetype.git</connection>
-        <developerConnection>scm:git:ssh://github.com:intellective-oss/unity7-maven-archetype.git</developerConnection>
-        <url>https://github.com/intellective-oss/unity7-maven-archetype/tree/master</url>
+        <connection>scm:git:git://github.com/intellectivelab/unity7-maven-archetype.git</connection>
+        <developerConnection>scm:git:ssh://github.com:intellectivelab/unity7-maven-archetype.git</developerConnection>
+        <url>https://github.com/intellectivelab/unity7-maven-archetype/tree/master</url>
     </scm>
 
     <build>
