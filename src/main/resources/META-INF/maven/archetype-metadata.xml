@@ -6,7 +6,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="unityVersion">
-            <defaultValue>7.7.0-RC4</defaultValue>
+            <defaultValue>7.7.0-RC11</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
