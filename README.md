@@ -1,28 +1,31 @@
 ![master](https://github.com/intellectivelab/unity7-maven-archetype/workflows/Build/badge.svg)
 
 # Unity 7 Maven Archetype
-Maven Archetype for creating projects based on Unity 7
+Maven Archetype for creating projects based on Unity 7.
+
+ * [Unity product page](https://www.intellective.com/unity/)
+ * [Documentation site](https://docs.intellectivelab.com/)
 
 ## Creating a project
 On Windows (cmd.exe):
 ```
 mvn archetype:generate "-DarchetypeGroupId=com.intellective.archetypes" ^
                        "-DarchetypeArtifactId=unity7-maven-archetype" ^
-                       "-DarchetypeVersion=1.0.4" ^
+                       "-DarchetypeVersion=1.0.5" ^
                        "-DgroupId=com.intellective.sample" ^
                        "-DartifactId=unity7-custom-app" ^
                        "-Dversion=1.0.0-SNAPSHOT" ^
-                       "-DunityVersion=7.7.0-RC11"
+                       "-DunityVersion=7.7.0.1"
 ```
 On Linux or MacOS:
 ```
 mvn archetype:generate -DarchetypeGroupId=com.intellective.archetypes \
                        -DarchetypeArtifactId=unity7-maven-archetype \
-                       -DarchetypeVersion=1.0.4 \
+                       -DarchetypeVersion=1.0.5 \
                        -DgroupId=com.intellective.sample \
                        -DartifactId=unity7-custom-app \
                        -Dversion=1.0.0-SNAPSHOT \
-                       -DunityVersion=7.7.0-RC11
+                       -DunityVersion=7.7.0.1
 ```
 
 ## System requirements
@@ -33,9 +36,9 @@ You should have the following software installed to build this application:
 * [Optional] [Docker runtime](https://www.docker.com) 
 
 ## Authorization
-To build an application you require a token for Maven repository and, optionally, a login/password pair for container
-registry.
-To get them you can contact your **Intellective** representative or send an e-mail to 
+To build an application you require an account to access Maven repository (maven.intellective.com) and
+Docker registry (registry.intellective.com).
+To get them, you can contact your **Intellective** representative or send an e-mail to 
 [info@intellective.com](mailto:info@intellective.com).
 
 #### Maven
@@ -48,24 +51,21 @@ Create or edit your `~/.m2/settings.xml` file to have the following server secti
   <servers>
      <!-- ... -->
      <server>
-        <id>intellective-maven</id>
-        <configuration>
-        <httpHeaders>
-          <property>
-            <name>Private-Token</name>
-            <value>[YOUR_TOKEN]</value>
-          </property>
-        </httpHeaders>
-        </configuration>
+     	<id>maven.intellective.com</id>
+     	<username>username</username>
+     	<password>password</password>
      </server>
      <!-- ... -->
+  </servers>
 </settings>
 ```
+You may [encrypt your password](https://maven.apache.org/guides/mini/guide-encryption.html) to keep it secure.
+
 ### Container registry
-It is optional step unless you plan to build a Docker image of your application.
+It is an optional step unless you plan to build a Docker image of your application.
 Use the following command to log into Intellective's container registry to gain access to Unity docker images:
 ```
-docker login docker.devops.intellectivelab.com
+docker login registry.intellective.com
 ```
 
 ## Project structure
@@ -79,7 +79,7 @@ Current project template contains the following set of modules:
 During the development of your application you are free to rename, re-arrange, 
 and/or modify it accordingly to your specific design.
 However, it defines effective minimal viable model for the custom project. It does make sense to keep it standardized 
-unless there're explicit requirements to change it.
+unless there are explicit requirements to change it.
 
 ## Building the application
 Use the following Maven command or perform corresponding action in the IDE of your choice:
