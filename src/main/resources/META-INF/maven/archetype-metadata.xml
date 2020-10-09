@@ -6,7 +6,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="unityVersion">
-            <defaultValue>7.7.0-RC11</defaultValue>
+            <defaultValue>7.7.0.1</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
@@ -16,7 +16,7 @@
                 <include>**/*.xml</include>
             </includes>
         </fileSet>
-        <fileSet encoding="UTF-8">
+        <fileSet filtered="true" encoding="UTF-8">
             <directory>custom-docker</directory>
             <includes>
                 <include>**/Dockerfile</include>
@@ -100,30 +100,6 @@
                     <includes>
                         <include>**/*.css</include>
                         <include>**/*.js</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>profiles/dev-no-tests</directory>
-                    <includes>
-                        <include>**/*.properties</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>profiles/integration-test</directory>
-                    <includes>
-                        <include>**/*.properties</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>profiles/all-tests</directory>
-                    <includes>
-                        <include>**/*.properties</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>profiles/dev</directory>
-                    <includes>
-                        <include>**/*.properties</include>
                     </includes>
                 </fileSet>
             </fileSets>
